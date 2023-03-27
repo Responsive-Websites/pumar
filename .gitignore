@@ -1,5 +1,5 @@
 phpmailer/
-
+**/*.DS_Store
 dist/
 Source/
 undefined
