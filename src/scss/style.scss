@@ -18,7 +18,7 @@ $fontFamily: Poppins;
 $fontSize: rem(16); // где 14(px) - размер шрифта по умолчанию из макета
 
 
-
+//
 
 // Основные цвета
 $mainColor: #1A0A03; // Цвет шрифта по умолчанию
@@ -95,8 +95,7 @@ body {
     @if ($containerPadding>0) {
       padding: 0 rem(math.div($containerPadding, 2));
     }
-  }
-} @else {
+   } @else {
   // По брейк-поинтам
   [class*='__container'] {
     margin: 0 auto;
