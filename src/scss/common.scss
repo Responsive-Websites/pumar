@@ -1,1 +1,27 @@
-// Заголовки, общие БЄМ блоки и проче...
+//colors
+$color_white: #ffffff;
+$color_orange: #ee5514;
+
+//buttons
+
+.button-mod {
+  background-color: #ee5514;
+  padding: rem(15) rem(30);
+  border-radius: rem(5);
+  display: inline-block;
+  span {
+    color: $color_white;
+    transition: all 0.3s ease;
+  }
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    outline: 1px solid $color_orange;
+    background-color: $color_white;
+
+    span {
+      color: $color_orange;
+    }
+  }
+}
