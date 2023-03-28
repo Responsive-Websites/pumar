@@ -76,7 +76,7 @@ import * as flsForms from "./files/forms/forms.js";
 
 /* Работа с полями формы */
 /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
-// flsForms.formFieldsInit({ viewPass: false });
+flsForms.formFieldsInit({ viewPass: false });
 
 /* Oтправка формы */
 /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
@@ -89,7 +89,7 @@ import * as flsForms from "./files/forms/forms.js";
 // flsForms.formRating();
 
 /* Модуль работы с select. */
-// import './libs/select.js'
+import "./libs/select.js";
 
 /* (В работе) Модуль работы с масками.*/
 /*
@@ -127,7 +127,7 @@ import * as flsForms from "./files/forms/forms.js";
 Документация плагина: https://swiperjs.com/
 Сниппет(HTML): swiper
 */
-// import "./files/sliders.js";
+import "./files/sliders.js";
 
 // ========================================================================================================================================================================================================================================================
 // Модули работы с прокруткой страницы ========================================================================================================================================================================================================================================================

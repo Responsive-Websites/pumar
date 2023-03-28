@@ -9,6 +9,7 @@ $color_orange: #ee5514;
   padding: rem(15) rem(30);
   border-radius: rem(5);
   display: inline-block;
+  color: $color_white;
   span {
     color: $color_white;
     transition: all 0.3s ease;

@@ -4,7 +4,65 @@
   <body>
     <div class="wrapper">
       @@include('html/_header.htm',{})
-      <main class="page"></main>
+      <main class="page">
+        <div class="page__preview preview-block">
+          <div class="preview-block__container">
+            <div class="preview-block__inner">
+              <div class="preview-block__content">
+                <h1 class="preview-block__heading">
+                  Life is better in running <span>shoes</span>.
+                </h1>
+                <p class="preview-block__text">
+                  Lorem ipsum dolor sit amet, consectetur <br />
+                  adipiscing elit. Egestas leo ultrices
+                </p>
+              </div>
+              <div class="preview-block__slider swiper">
+                <div class="preview-block__wrapper swiper-wrapper">
+                  <div class="preview-block__slide swiper-slide">
+                    <a href="#" class="preview-block__slide-image">
+                      <img src="@img/preview-block/shoe-1.png" alt="#" />
+                    </a>
+                  </div>
+                  <div class="preview-block__slide swiper-slide">
+                    <a href="#" class="preview-block__slide-image">
+                      <img src="@img/preview-block/shoe-2.png" alt="#" />
+                    </a>
+                  </div>
+                </div>
+                <div class="preview-block__slider-next">
+                  <span class="_icon-arrow-slider"></span>
+                </div>
+              </div>
+            </div>
+            <div class="preview-block__craft craft-block">
+              <div class="craft-block__inner">
+                <div class="craft-block__items">
+                  <div class="craft-block__item">
+                    <p class="craft-block__item-name">Brand</p>
+                    <select name="form[]" class="craft-block__item-select form">
+                      <option value="1" selected>Puma</option>
+                      <option value="2">Puma 1</option>
+                      <option value="3">Puma 2</option>
+                      <option value="4">Puma 3</option>
+                    </select>
+                  </div>
+                  <div class="craft-block__item">
+                    <p class="craft-block__item-name">Brand</p>
+                    <select name="form[]" class="craft-block__item-select form">
+                      <option value="1" selected>Puma</option>
+                      <option value="2">Puma 1</option>
+                      <option value="3">Puma 2</option>
+                      <option value="4">Puma 3</option>
+                    </select>
+                  </div>
+                </div>
+                <button class="craft-block__button button-mod">Buy now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
       @@include('html/_footer.htm',{})
     </div>
     @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
