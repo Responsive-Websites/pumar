@@ -5,8 +5,10 @@
   &__video-block {
     @include adpv("margin-top", 1, 140, 80);
   }
+  &__features {
+    @include adpv("margin-top", 1, 140, 80);
+  }
 }
-
 //preview block styles
 .preview-block {
   &__container {
@@ -259,6 +261,117 @@
 
       &:hover {
         transform: scale(1.03);
+      }
+    }
+  }
+}
+
+//features block styles
+
+.features-block {
+  &__container {
+  }
+
+  &__inner {
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin-bottom: rem(10);
+    font-family: SourceSerifPro;
+    font-weight: 600;
+    @include adpv("font-size", 1, 20, 18);
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #ee5514;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    text-align: center;
+    font-family: SourceSerifPro;
+    font-weight: 600;
+    @include adpv("font-size", 1, 44, 26);
+    line-height: 130%;
+  }
+
+  &__items {
+    @include adpv("margin-top", 1, 60, 30);
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: rem(30);
+    justify-content: center;
+  }
+
+  &__item {
+    flex: 1 0 rem(280);
+    display: grid;
+    justify-items: center;
+    background: #ffffff;
+    box-shadow: 0px 1px 30px rgba(26, 10, 3, 0.05);
+    border-radius: 10px;
+    @include adpv("padding", 1, 56, 20);
+
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      background: #f5f0ed;
+    }
+  }
+
+  &__icon {
+    margin-bottom: rem(30);
+    width: rem(140);
+  }
+
+  &__label {
+    margin-bottom: rem(10);
+    font-family: SourceSerifPro;
+    font-weight: 600;
+
+    @include adpv("font-size", 1, 22, 18);
+    line-height: 150%;
+
+    text-align: center;
+  }
+
+  &__text {
+    margin-bottom: rem(20);
+    text-align: center;
+
+    font-size: rem(14);
+    line-height: 160%;
+
+    opacity: 0.7;
+  }
+
+  &__link {
+    display: flex;
+    gap: rem(10);
+    align-items: center;
+    color: $color_orange;
+    position: relative;
+    span {
+      font-size: rem(10);
+      color: $mainColor;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: rem(-4);
+      left: -50%;
+      height: rem(2);
+      width: calc(100% - rem(16));
+      background-color: #ee5514;
+      opacity: 0;
+      transition: all 0.3s ease 0s;
+    }
+    &:hover {
+      &::before {
+        opacity: 1;
+        left: 0px;
       }
     }
   }
