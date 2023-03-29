@@ -8,6 +8,9 @@
   &__features {
     @include adpv("margin-top", 1, 140, 80);
   }
+  &__gallery-block {
+    @include adpv("margin-top", 1, 140, 80);
+  }
 }
 //preview block styles
 .preview-block {
@@ -374,5 +377,127 @@
         left: 0px;
       }
     }
+  }
+}
+
+//gallery block styles
+
+.gallery-block {
+  &__container {
+  }
+
+  &__inner {
+  }
+
+  &__subtitle {
+    font-family: SourceSerifPro;
+    font-weight: 600;
+    font-size: rem(20);
+    @include adpv("font-size", 1, 20, 16);
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    color: $color_orange;
+    text-transform: uppercase;
+    margin-bottom: rem(10);
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-family: SourceSerifPro;
+    font-weight: 600;
+    line-height: 130%;
+    @include adpv("font-size", 1, 44, 26);
+    color: #1a0a03;
+    margin-bottom: rem(12);
+  }
+
+  &__categories {
+    @include adpv("margin-bottom", 1, 60, 30);
+  }
+
+  &__slider {
+  }
+
+  &__wrapper {
+  }
+
+  &__slide {
+  }
+
+  &__slide-image {
+    margin-bottom: rem(30);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__slide-label {
+    font-family: SourceSerifPro;
+    font-weight: 600;
+
+    @include adpv("font-size", 1, 22, 18);
+    line-height: 150%;
+    margin-bottom: rem(10);
+  }
+
+  &__slide-info {
+    margin-bottom: rem(10);
+  }
+
+  &__slide-item {
+  }
+
+  &__slide-button {
+  }
+}
+.categories-gallery {
+  display: flex;
+  align-items: center;
+  gap: rem(30);
+  &__label {
+    @include adpv("font-size", 1, 20, 16);
+    line-height: 140%;
+
+    letter-spacing: 0.05em;
+
+    color: #1a0a03;
+
+    opacity: 0.7;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    @include adpv("gap", 1, 40, 16);
+  }
+
+  &__item {
+    @include adpv("font-size", 1, 18, 12);
+    &_active {
+      color: $color_orange;
+    }
+  }
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+
+  &__label {
+    font-size: rem(16);
+    line-height: 160%;
+    color: #1a0a03;
+    opacity: 0.7;
+  }
+
+  &__data {
+    font-size: rem(16);
+
+    line-height: 160%;
+    color: #1a0a03;
+
+    opacity: 0.8;
   }
 }
