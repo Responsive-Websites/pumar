@@ -113,6 +113,9 @@
 }
 
 .craft-block {
+  @media (max-width: $mobile) {
+    margin-top: rem(40);
+  }
   &__inner {
     display: inline-flex;
     padding: rem(30) rem(54);
@@ -121,16 +124,50 @@
     background: #ffffff;
     box-shadow: 0px 1px 14px rgba(26, 10, 3, 0.05);
     border-radius: rem(5);
+    @include adpv("gap", 1, 40, 20);
+
+    @media (max-width: $mobile) {
+      flex-wrap: wrap;
+      display: flex;
+      padding: rem(15) rem(25);
+      justify-content: center;
+    }
   }
 
   &__items {
     display: flex;
     gap: rem(80);
+    @media (max-width: $mobile) {
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: rem(20);
+    }
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+    }
   }
 
   &__item {
     display: grid;
     gap: rem(10);
+    position: relative;
+
+    &:not(:last-child) {
+      &::before {
+        content: "";
+        position: absolute;
+        right: rem(-40);
+        top: 50%;
+        transform: translate(0px, -50%);
+        width: rem(2);
+        height: rem(40);
+        background-color: $color_orange;
+
+        @media (max-width: $mobile) {
+          display: none;
+        }
+      }
+    }
   }
 
   &__item-name {
@@ -145,5 +182,8 @@
   }
 
   &__button {
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
   }
 }

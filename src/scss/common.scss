@@ -20,7 +20,7 @@ $color_orange: #ee5514;
   &:hover {
     outline: 1px solid $color_orange;
     background-color: $color_white;
-
+    color: $color_orange;
     span {
       color: $color_orange;
     }
