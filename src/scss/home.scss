@@ -14,6 +14,9 @@
   &__quote-block {
     @include adpv("margin-top", 1, 140, 80);
   }
+  &__sign-block {
+    @include adpv("margin-top", 1, 140, 80);
+  }
 }
 //preview block styles
 .preview-block {
@@ -591,5 +594,110 @@
     top: rem(-40);
     left: 0;
     z-index: -1;
+  }
+}
+
+// sign block styles
+
+.sign-block {
+  &__container {
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #81a8da2f;
+    border-radius: rem(10);
+    gap: rem(60);
+  }
+
+  &__image {
+    img {
+      max-width: rem(488);
+      width: 100%;
+    }
+    @media (max-width: rem(1020)) {
+      display: none;
+    }
+  }
+
+  &__content {
+    flex: 1 0 rem(526);
+    @include adpv("padding", 1, 50, 24);
+
+    @media (max-width: rem(1020)) {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+    }
+
+    @media (max-width: rem(610)) {
+      flex: 1 1 auto;
+    }
+  }
+
+  &__title {
+    font-family: SourceSerifPro;
+    font-weight: 600;
+    line-height: 140%;
+    @include adpv("font-size", 1, 31, 24);
+    margin-bottom: rem(20);
+
+    @media (max-width: rem(1020)) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-size: rem(18);
+    line-height: 160%;
+
+    opacity: 0.7;
+    &:not(:last-child) {
+      @include adpv("margin-bottom", 1, 40, 24);
+    }
+    @media (max-width: rem(1020)) {
+      text-align: center;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    @media (max-width: rem(1020)) {
+      max-width: rem(500);
+    }
+    @media (max-width: rem(610)) {
+      flex-direction: column;
+      max-width: none;
+      width: 100%;
+    }
+    input {
+      flex: 1 1 100%;
+      height: rem(50);
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: rem(5);
+      padding: rem(15) rem(30);
+      font-size: rem(14);
+      line-height: 150%;
+
+      @media (max-width: rem(610)) {
+        width: 100%;
+      }
+    }
+    button {
+      height: rem(50);
+      margin-left: rem(-20);
+      border-radius: 0px rem(5) rem(5) 0px;
+      padding: 0px;
+      min-width: rem(116);
+      @media (max-width: rem(610)) {
+        width: 100%;
+        margin-left: rem(0);
+        border-radius: rem(5);
+        margin-top: rem(10);
+      }
+    }
   }
 }
