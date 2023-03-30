@@ -11,6 +11,9 @@
   &__gallery-block {
     @include adpv("margin-top", 1, 140, 80);
   }
+  &__quote-block {
+    @include adpv("margin-top", 1, 140, 80);
+  }
 }
 //preview block styles
 .preview-block {
@@ -499,5 +502,94 @@
     color: #1a0a03;
 
     opacity: 0.8;
+  }
+}
+
+//quote block styles
+
+.quote-block {
+  &__container {
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(30);
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    font-family: SourceSerifPro;
+    font-weight: 600;
+    line-height: 130%;
+    @include adpv("font-size", 1, 38, 26);
+    color: #1a0a03;
+    @include adpv("margin-bottom", 1, 60, 26);
+    text-align: center;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 rem(555);
+    img {
+      max-width: rem(555);
+      width: 100%;
+    }
+  }
+
+  &__content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  &__icon {
+    img {
+      width: rem(100);
+    }
+    margin-bottom: rem(70);
+  }
+
+  &__info {
+    position: relative;
+  }
+
+  &__sub-title {
+    font-family: SourceSerifPro;
+    font-weight: 600;
+    font-size: rem(22);
+    line-height: 150%;
+    margin-bottom: rem(15);
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: 160%;
+    opacity: 0.7;
+    margin-bottom: rem(25);
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: 160%;
+    margin-bottom: rem(10);
+  }
+
+  &__profession {
+    font-size: rem(14);
+    line-height: 160%;
+    opacity: 0.8;
+  }
+
+  &__icon-quote {
+    position: absolute;
+    top: rem(-40);
+    left: 0;
+    z-index: -1;
   }
 }
